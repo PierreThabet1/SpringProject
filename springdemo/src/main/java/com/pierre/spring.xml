@@ -5,7 +5,14 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien" class="com.pierre.Alien" scope="prototype"></bean>
+    <bean id="alien" class="com.pierre.Alien" >
+        <property name="age" value="10"></property>
+        <property name="Laptop" ref="Laptop" autowire="byType"></property>
+    </bean>
+
+    <bean id="Laptop" class="com.pierre.Laptop" >
+        
+    </bean>
 
 
 </beans>
